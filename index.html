@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário Lívia ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://iili.io/J9cApsR.gif') repeat;
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      animation: float 6s infinite ease-in;
+      z-index: 9999;
+    }
+    @keyframes float {
+      0% {transform: translateY(0) rotate(0deg); opacity: 1;}
+      100% {transform: translateY(-110vh) rotate(360deg); opacity: 0;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Desenvolvido com carinho -->
+<div class="paper heart"></div>
+<div class="paper image">
+  <p>Feliz Aniversário</p>
+  <p>Minha Princesa 🎂❤️</p>
+  <img src="https://iili.io/3DKillR.th.jpg" alt="Foto 1" />
+</div>
+<div class="paper image">
+  <p>Que seu dia</p>
+  <p>seja lindo e especial 🎉</p>
+  <img src="https://iili.io/3DKiEHN.th.jpg" alt="Foto 2" />
+</div>
+<div class="paper image">
+  <p>Você merece</p>
+  <p>toda felicidade do mundo 🥰</p>
+  <img src="https://iili.io/3DKi0Sp.th.jpg" alt="Foto 3" />
+</div>
+<div class="paper image">
+  <p>Hoje o dia é todo seu!</p>
+  <p>Que seus sonhos se realizem ✨</p>
+  <img src="https://iili.io/3DKiMNt.th.jpg" alt="Foto 4" />
+</div>
+<div class="paper red">
+  <p class="p1">Parabéns, Amor!</p>
+  <p class="p2">Muitos anos de vida ❤️🎈</p>
+</div>
+<div class="paper red">
+  <p class="p1">Você é incrível, Lívia!</p>
+  <p class="p2">e a loh uma fedelha ❤️</p>
+</div>
+<div class="paper image">
+  <p>Que nunca te falte</p>
+  <p>amor, saúde e alegria 💖</p>
+  <img src="https://iili.io/3DKiVDX.th.jpg" alt="Foto 5" />
+</div>
+<div class="paper">
+  <p class="p1">Parabéns, meu amor!</p>
+  <p class="p1">Que seu sorriso nunca falte 💝</p>
+</div>
+<div class="paper">
+  <p class="p1">Arraste os papéis para ver mais 😍</p>
+</div>
+
+<!-- Efeitos de balões -->
+<script>
+  const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
+  function createBalloon() {
+    const balloon = document.createElement('div');
+    balloon.classList.add('balloon');
+    balloon.style.left = Math.random() * 100 + 'vw';
+    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    balloon.style.width = '20px';
+    balloon.style.height = '30px';
+    balloon.style.borderRadius = '50%';
+    balloon.style.opacity = '0.7';
+    document.body.appendChild(balloon);
+    setTimeout(() => balloon.remove(), 6000);
+  }
+  setInterval(createBalloon, 500);
+</script>
+
+<!-- Música de fundo -->
+<audio autoplay loop>
+  <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
+Seu navegador não suporta áudio.
+</audio>
+
+<!-- Arquivo javascript -->
+<script src="script.js"></script>
+</body>
+</html>
