@@ -29,6 +29,20 @@
       0% {transform: translateY(0) rotate(0deg); opacity: 1;}
       100% {transform: translateY(-110vh) rotate(360deg); opacity: 0;}
     }
+    #playButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 10000;
+    }
   </style>
 </head>
 <body>
@@ -61,7 +75,7 @@
 </div>
 <div class="paper red">
   <p class="p1">Você é incrível, Lívia!</p>
-  <p class="p2">e a loh uma fedelha ❤️</p>
+  <p class="p2">e a loh é uma fedelha ❤️</p>
 </div>
 <div class="paper image">
   <p>Que nunca te falte</p>
@@ -75,6 +89,9 @@
 <div class="paper">
   <p class="p1">Arraste os papéis para ver mais 😍</p>
 </div>
+
+<!-- Botão para tocar música -->
+<button id="playButton">▶ Tocar Música</button>
 
 <!-- Efeitos de balões -->
 <script>
@@ -95,10 +112,16 @@
 </script>
 
 <!-- Música de fundo -->
-<audio autoplay loop>
+<audio id="bgm" loop>
   <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
 Seu navegador não suporta áudio.
 </audio>
+<script>
+  document.getElementById("playButton").addEventListener("click", function() {
+    document.getElementById("bgm").play();
+    this.style.display = "none";
+  });
+</script>
 
 <!-- Arquivo javascript -->
 <script src="script.js"></script>
