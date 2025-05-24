@@ -1,4 +1,3 @@
-
 let highestZ = 1;
 
 class Paper {
@@ -75,6 +74,38 @@ class Paper {
     });
 
     paper.addEventListener("contextmenu", (e) => e.preventDefault());
+
+    // Eventos para toque
+    paper.addEventListener("touchstart", (e) => {
+      e.preventDefault();
+      const touch = e.touches[0];
+      this.mouseX = touch.clientX;
+      this.mouseY = touch.clientY;
+      this.mouseTouchX = this.mouseX;
+      this.mouseTouchY = this.mouseY;
+      this.prevMouseX = this.mouseX;
+      this.prevMouseY = this.mouseY;
+      this.holdingPaper = true;
+      paper.style.zIndex = highestZ++;
+    });
+
+    document.addEventListener("touchmove", (e) => {
+      if (!this.holdingPaper) return;
+      const touch = e.touches[0];
+      this.mouseX = touch.clientX;
+      this.mouseY = touch.clientY;
+      this.velX = this.mouseX - this.prevMouseX;
+      this.velY = this.mouseY - this.prevMouseY;
+      this.currentPaperX += this.velX;
+      this.currentPaperY += this.velY;
+      this.prevMouseX = this.mouseX;
+      this.prevMouseY = this.mouseY;
+      paper.style.transform = `translateX(${this.currentPaperX}px) translateY(${this.currentPaperY}px) rotateZ(${this.rotation}deg)`;
+    });
+
+    document.addEventListener("touchend", () => {
+      this.holdingPaper = false;
+    });
   }
 }
 
@@ -83,3 +114,4 @@ papers.forEach((paper) => {
   const p = new Paper();
   p.init(paper);
 });
+
