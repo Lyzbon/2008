@@ -10,7 +10,8 @@ body {
   background-size: cover;
   background-position: center center;
   font-family: 'Zeyada', cursive;
-  overflow: auto;
+  overflow: hidden;
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur826.cur'), auto;
 }
 
 .paper {
@@ -25,8 +26,6 @@ body {
   transition: transform 0.3s ease;
   cursor: grab;
   user-select: none;
-  max-width: 90vw;
-  max-height: 90vh;
 }
 
 .paper:hover {
