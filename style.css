@@ -1,1 +1,130 @@
-/* Conteúdo do style.css será igual ao CSS inline que você já usou, omito aqui pois é longo */
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body {
+  font-family: 'Homemade Apple', cursive;
+  background-color: #fff0f6;
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://iili.io/3D7x3Ku.png') repeat;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.paper {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+  margin: 20px auto;
+  max-width: 350px;
+  padding: 25px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: grab;
+}
+
+.paper.image img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+}
+
+.paper.red {
+  background: #ff69b4;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.p1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.p2 {
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+}
+
+#playButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  transition: background-color 0.3s ease;
+}
+
+#playButton:hover {
+  background-color: #e055a3;
+}
+
+.balloon {
+  position: fixed;
+  bottom: -100px;
+  animation: float 6s infinite ease-in;
+  z-index: 9999;
+  border-radius: 50% / 60%;
+  opacity: 0.7;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+#confirmButton {
+  background-color: #32cd32;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 40px auto 0 auto;
+  display: block;
+  max-width: 350px;
+  transition: background-color 0.3s ease;
+}
+
+#confirmButton:hover:not(:disabled) {
+  background-color: #28a428;
+}
+
+#confirmationMessage {
+  display: none;
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  text-align: center;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
