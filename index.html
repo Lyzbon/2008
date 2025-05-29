@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feliz Aniversário Lívia ❤️</title>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bora sair comigo, amor? ❤️</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap"
+    rel="stylesheet"
+  />
   <style>
+    body {
+      font-family: 'Homemade Apple', cursive;
+      background-color: #fff0f6;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      overflow-x: hidden;
+    }
+
     body::before {
       content: "";
       position: fixed;
@@ -19,16 +30,43 @@
       pointer-events: none;
       z-index: 0;
     }
-    .balloon {
-      position: fixed;
-      bottom: -100px;
-      animation: float 6s infinite ease-in;
-      z-index: 9999;
+
+    .paper {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+      margin: 20px auto;
+      max-width: 350px;
+      padding: 25px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
     }
-    @keyframes float {
-      0% {transform: translateY(0) rotate(0deg); opacity: 1;}
-      100% {transform: translateY(-110vh) rotate(360deg); opacity: 0;}
+
+    .paper.image img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
     }
+
+    .paper.red {
+      background: #ff69b4;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .p1 {
+      margin: 0;
+      font-size: 1.3rem;
+    }
+
+    .p2 {
+      margin: 10px 0 0 0;
+      font-size: 1.1rem;
+    }
+
     #playButton {
       position: fixed;
       bottom: 20px;
@@ -40,90 +78,167 @@
       padding: 10px 20px;
       font-size: 16px;
       cursor: pointer;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
       z-index: 10000;
+      transition: background-color 0.3s ease;
+    }
+
+    #playButton:hover {
+      background-color: #e055a3;
+    }
+
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      animation: float 6s infinite ease-in;
+      z-index: 9999;
+      border-radius: 50% / 60%;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    /* Botão confirmar presença */
+    #confirmButton {
+      background-color: #32cd32;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 25px;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      margin: 40px auto 0 auto;
+      display: block;
+      max-width: 350px;
+      transition: background-color 0.3s ease;
+    }
+
+    #confirmButton:hover:not(:disabled) {
+      background-color: #28a428;
+    }
+
+    #confirmationMessage {
+      display: none;
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+      text-align: center;
+      max-width: 350px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 <body>
+  <div class="paper heart"></div>
 
-<!-- Desenvolvido com carinho -->
-<div class="paper heart"></div>
-<div class="paper image">
-  <p>Feliz Aniversário</p>
-  <p>Minha Princesa 🎂❤️</p>
-  <img src="https://iili.io/3DKillR.th.jpg" alt="Foto 1" />
-</div>
-<div class="paper image">
-  <p>Que seu dia</p>
-  <p>seja lindo e especial 🎉</p>
-  <img src="https://iili.io/3DKiEHN.th.jpg" alt="Foto 2" />
-</div>
-<div class="paper image">
-  <p>Você merece</p>
-  <p>toda felicidade do mundo 🥰</p>
-  <img src="https://iili.io/3DKi0Sp.th.jpg" alt="Foto 3" />
-</div>
-<div class="paper image">
-  <p>Hoje o dia é todo seu!</p>
-  <p>Que seus sonhos se realizem ✨</p>
-  <img src="https://iili.io/3DKiMNt.th.jpg" alt="Foto 4" />
-</div>
-<div class="paper red">
-  <p class="p1">Parabéns, Amor!</p>
-  <p class="p2">Muitos anos de vida ❤️🎈</p>
-</div>
-<div class="paper red">
-  <p class="p1">Você é incrível, Lívia!</p>
-  <p class="p2">e a loh é uma fedelha ❤️</p>
-</div>
-<div class="paper image">
-  <p>Que nunca te falte</p>
-  <p>amor, saúde e alegria 💖</p>
-  <img src="https://iili.io/3DKiVDX.th.jpg" alt="Foto 5" />
-</div>
-<div class="paper">
-  <p class="p1">Parabéns, meu amor!</p>
-  <p class="p1">Que seu sorriso nunca falte 💝</p>
-</div>
-<div class="paper">
-  <p class="p1">Arraste os papéis para ver mais 😍</p>
-</div>
+  <div class="paper image">
+    <p>Oi, meu amor 💖</p>
+    <p>Topa sair comigo semana que vem?</p>
+    <img src="https://iili.io/3prVRI9.jpg" alt="Convite fofo 1" />
+  </div>
 
-<!-- Botão para tocar música -->
-<button id="playButton">▶ Tocar Música</button>
+  <div class="paper image">
+    <p>Pensei na gente curtindo o Fuzuê 🍻</p>
+    <p>Rindo, dançando e sendo felizes juntos ✨</p>
+    <img src="https://iili.io/3prVTeS.jpg" alt="Convite fofo 2" />
+  </div>
 
-<!-- Efeitos de balões -->
-<script>
-  const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
-  function createBalloon() {
-    const balloon = document.createElement('div');
-    balloon.classList.add('balloon');
-    balloon.style.left = Math.random() * 100 + 'vw';
-    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    balloon.style.width = '20px';
-    balloon.style.height = '30px';
-    balloon.style.borderRadius = '50%';
-    balloon.style.opacity = '0.7';
-    document.body.appendChild(balloon);
-    setTimeout(() => balloon.remove(), 6000);
-  }
-  setInterval(createBalloon, 500);
-</script>
+  <div class="paper image">
+    <p>Ou, se preferir, vamos pro Tropicano?</p>
+    <p>Te levo onde você quiser, princesa 💃</p>
+    <img src="https://iili.io/3prV5Xe.jpg" alt="Convite fofo 3" />
+  </div>
 
-<!-- Música de fundo -->
-<audio id="bgm" loop>
-  <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
-Seu navegador não suporta áudio.
-</audio>
-<script>
-  document.getElementById("playButton").addEventListener("click", function() {
-    document.getElementById("bgm").play();
-    this.style.display = "none";
-  });
-</script>
+  <div class="paper image">
+    <p>O que importa é estar com você 💕</p>
+    <p>Para criarmos memórias juntos</p>
+    <p><i>Assinado: seu boy do Tinder ❤️</i></p>
+  </div>
 
-<!-- Arquivo javascript -->
-<script src="script.js"></script>
+  <div class="paper red">
+    <p class="p1">Só me diz:</p>
+    <p class="p2">Fuzuê ou Tropicano, amor? 😍</p>
+  </div>
+
+  <div class="paper red">
+    <p class="p1">Se arruma toda pra mim 🥰</p>
+    <p class="p2">Porque vou buscar você ❤️</p>
+  </div>
+
+  <div class="paper image">
+    <p>Vai ser lindo do seu lado</p>
+    <p>Como tudo é com você 💫</p>
+    <img src="https://iili.io/3prVum7.jpg" alt="Convite fofo 5" />
+  </div>
+
+  <div class="paper">
+    <p class="p1">Me responde, vai?</p>
+    <p class="p1">Tô ansioso pra te ver brilhar ✨</p>
+  </div>
+
+  <div class="paper">
+    <p class="p1">Arrasta os papéis com carinho</p>
+    <p class="p1">e confirma o rolê com seu boy 💌</p>
+  </div>
+
+  <!-- Botão para tocar música -->
+  <button id="playButton">▶ Tocar Música</button>
+
+  <!-- Botão de Confirmar Presença -->
+  <button id="confirmButton">✅ Confirmar Presença</button>
+  <p id="confirmationMessage">Presença confirmada, amor! 💕 Mal posso esperar! 😍</p>
+
+  <!-- Efeitos de balões -->
+  <script>
+    const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
+    function createBalloon() {
+      const balloon = document.createElement('div');
+      balloon.classList.add('balloon');
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.backgroundColor =
+        colors[Math.floor(Math.random() * colors.length)];
+      balloon.style.width = '20px';
+      balloon.style.height = '30px';
+      balloon.style.borderRadius = '50%';
+      balloon.style.opacity = '0.7';
+      document.body.appendChild(balloon);
+      setTimeout(() => balloon.remove(), 6000);
+    }
+    setInterval(createBalloon, 500);
+  </script>
+
+  <!-- Música de fundo -->
+  <audio id="bgm" loop>
+    <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3" />
+    Seu navegador não suporta áudio.
+  </audio>
+  <script>
+    document
+      .getElementById('playButton')
+      .addEventListener('click', function () {
+        document.getElementById('bgm').play();
+        this.style.display = 'none';
+      });
+
+    document
+      .getElementById('confirmButton')
+      .addEventListener('click', function () {
+        document.getElementById('confirmationMessage').style.display = 'block';
+        this.disabled = true;
+        this.textContent = 'Presença Confirmada';
+        this.style.backgroundColor = '#aaa';
+      });
+  </script>
 </body>
 </html>
