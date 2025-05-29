@@ -121,10 +121,16 @@
 </script>
 
 <!-- Música de fundo -->
-<audio autoplay loop>
+<audio id="bgm" loop>
   <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
-Seu navegador não suporta áudio.
+  Seu navegador não suporta áudio.
 </audio>
+<script>
+  document.getElementById("playButton").addEventListener("click", function() {
+    document.getElementById("bgm").play();
+    this.style.display = "none";
+  });
+</script>
 
 <!-- Arquivo javascript -->
 <script src="script.js"></script>
