@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>Feliz Aniversário Lívia ❤️</title>
+  <title>Bora sair comigo, amor? ❤️</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&amp;family=Homemade+Apple&amp;display=swap'>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -14,7 +13,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url('https://iili.io/J9cApsR.gif') repeat;
+      background: url('https://iili.io/3D7x3Ku.png') repeat;
       opacity: 0.1;
       pointer-events: none;
       z-index: 0;
@@ -33,47 +32,35 @@
 </head>
 <body>
 
-<!-- Desenvolvido com carinho -->
-<div class="paper heart"></div>
+<!-- Papéis com frases e imagens -->
 <div class="paper image">
-  <p>Feliz Aniversário</p>
-  <p>Minha Princesa 🎂❤️</p>
-  <img src="https://iili.io/3DKillR.th.jpg" alt="Foto 1" />
+  <p>Oi, meu amor 💖</p>
+  <p>Topa sair comigo semana que vem?</p>
+  <img src="https://iili.io/3prVRI9.jpg" alt="Convite 1" />
 </div>
+
 <div class="paper image">
-  <p>Que seu dia</p>
-  <p>seja lindo e especial 🎉</p>
-  <img src="https://iili.io/3DKiEHN.th.jpg" alt="Foto 2" />
+  <p>Pensei na gente curtindo o Fuzuê 🍻</p>
+  <p>Rindo, dançando e sendo felizes juntos ✨</p>
+  <img src="https://iili.io/3prVTeS.jpg" alt="Convite 2" />
 </div>
+
 <div class="paper image">
-  <p>Você merece</p>
-  <p>toda felicidade do mundo 🥰</p>
-  <img src="https://iili.io/3DKi0Sp.th.jpg" alt="Foto 3" />
+  <p>Ou, se preferir, vamos pro Tropicano?</p>
+  <p>Te levo onde você quiser, princesa 💃</p>
+  <img src="https://iili.io/3prV5Xe.jpg" alt="Convite 3" />
 </div>
+
 <div class="paper image">
-  <p>Hoje o dia é todo seu!</p>
-  <p>Que seus sonhos se realizem ✨</p>
-  <img src="https://iili.io/3DKiMNt.th.jpg" alt="Foto 4" />
+  <p>O que importa é estar com você 💕</p>
+  <p>Para criarmos uma memória juntos</p>
+  <img src="https://iili.io/3prVum7.jpg" alt="Convite 4" />
 </div>
-<div class="paper red">
-  <p class="p1">Parabéns, Amor!</p>
-  <p class="p2">Muitos anos de vida ❤️🎈</p>
-</div>
-<div class="paper red">
-  <p class="p1">Você é incrível, Lívia!</p>
-  <p class="p2">e a loh uma fedelha ❤️</p>
-</div>
+
 <div class="paper image">
-  <p>Que nunca te falte</p>
-  <p>amor, saúde e alegria 💖</p>
-  <img src="https://iili.io/3DKiVDX.th.jpg" alt="Foto 5" />
-</div>
-<div class="paper">
-  <p class="p1">Parabéns, meu amor!</p>
-  <p class="p1">Que seu sorriso nunca falte 💝</p>
-</div>
-<div class="paper">
-  <p class="p1">Arraste os papéis para ver mais 😍</p>
+  <p>Vai ser lindo do seu lado</p>
+  <p>Como tudo é com você 💫</p>
+  <img src="https://iili.io/3prVum7.jpg" alt="Convite 5" />
 </div>
 
 <!-- Efeitos de balões -->
@@ -95,12 +82,17 @@
 </script>
 
 <!-- Música de fundo -->
-<audio autoplay loop>
+<audio id="bgm" loop>
   <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
-Seu navegador não suporta áudio.
+  Seu navegador não suporta áudio.
 </audio>
+<script>
+  document.getElementById("playButton")?.addEventListener("click", function() {
+    document.getElementById("bgm").play();
+    this.style.display = "none";
+  });
+</script>
 
-<!-- Arquivo javascript -->
-<script src="script.js"></script>
 </body>
 </html>
+
