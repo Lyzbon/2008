@@ -99,20 +99,19 @@ p {
 
 @media (max-width: 600px) {
   .paper {
-    padding: 10px 20px;
-    background-size: 300px;
+    padding: 15px 30px;
   }
   p {
-    font-size: 24px;
+    font-size: 32px;
   }
   .paper.image p {
-    font-size: 20px;
+    font-size: 24px;
   }
   img {
-    max-height: 120px;
+    max-height: 150px;
   }
   .paper.heart {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
   }
 }

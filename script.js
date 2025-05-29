@@ -43,7 +43,6 @@ class Paper {
           this.currentPaperX += this.velX;
           this.currentPaperY += this.velY;
         }
-
         this.prevMouseX = this.mouseX;
         this.prevMouseY = this.mouseY;
 
@@ -53,6 +52,7 @@ class Paper {
 
     paper.addEventListener("mousedown", (e) => {
       if (this.holdingPaper) return;
+
       this.holdingPaper = true;
       paper.style.zIndex = highestZ;
       highestZ += 1;
@@ -73,6 +73,8 @@ class Paper {
       this.holdingPaper = false;
       this.rotating = false;
     });
+
+    paper.addEventListener("contextmenu", (e) => e.preventDefault());
   }
 }
 
