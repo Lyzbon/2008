@@ -120,19 +120,8 @@
   setInterval(createBalloon, 500);
 </script>
 
-<!-- Música de fundo -->
-<audio id="bgm" loop>
-  <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
-  Seu navegador não suporta áudio.
-</audio>
-<script>
-  document.getElementById("playButton").addEventListener("click", function() {
-    document.getElementById("bgm").play();
-    this.style.display = "none";
-  });
-</script>
-
-  <div style="text-align: center; margin-top: 30px; z-index: 9999; position: relative;">
+<!-- Botão de Confirmar Presença -->
+<div style="text-align: center; margin-top: 30px; z-index: 9999; position: relative;">
   <button id="confirmButton" style="
     background-color: #32cd32;
     color: white;
@@ -157,7 +146,9 @@
   });
 </script>
 
-<!-- Arquivo javascript -->
+<!-- JavaScript externo (se necessário) -->
 <script src="script.js"></script>
+
 </body>
 </html>
+
