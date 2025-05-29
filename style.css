@@ -57,12 +57,13 @@ body {
 }
 
 img {
-  max-height: 200px;
-  width: 100%;
+  max-height: 200px; /* controla o máximo da altura */
+  width: auto;       /* largura automática para manter proporção */
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   user-select: none;
   pointer-events: none;
+
 }
 
 .paper.heart::after {
