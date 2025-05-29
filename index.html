@@ -102,6 +102,9 @@
 </div>
 
 
+!-- Botão para tocar música -->
+<button id="playButton">▶ Tocar Música</button>
+
 <!-- Efeitos de balões -->
 <script>
   const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
@@ -118,6 +121,18 @@
     setTimeout(() => balloon.remove(), 6000);
   }
   setInterval(createBalloon, 500);
+</script>
+
+<!-- Música de fundo -->
+<audio id="bgm" loop>
+  <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
+  Seu navegador não suporta áudio.
+</audio>
+<script>
+  document.getElementById("playButton").addEventListener("click", function() {
+    document.getElementById("bgm").play();
+    this.style.display = "none";
+  });
 </script>
 
 <!-- Botão de Confirmar Presença -->
@@ -167,4 +182,3 @@
 
 </body>
 </html>
-
