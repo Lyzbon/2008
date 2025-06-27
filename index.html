@@ -1,137 +1,173 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mensagem</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bora sair comigo, amor? ❤️</title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Short+Stack&family=Homemade+Apple&display=swap'>
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #121212; /* fundo escuro */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      color: white;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .container {
-      display: flex;
-      gap: 40px;
-      width: 100%;
-      max-width: 900px;
-      justify-content: space-between;
-    }
-
-    .paper {
-      background: #fff; /* papel branco */
-      color: #121212; /* texto escuro para contraste */
-      padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px 5px #ff4081; /* sombra rosa */
-      font-size: 22px;
-      max-width: 400px;
-      text-align: center;
-      font-weight: bold;
-      border: 3px solid #ff4081;
-      transition: transform 0.3s ease;
-      cursor: grab;
-      user-select: none;
-    }
-
-    .paper:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px 8px #ff79b0;
-      border-color: #ff79b0;
-    }
-
-    a {
-      color: #ff4081;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Responsividade do iframe do áudio */
-    .audio-wrapper {
-      text-align: center;
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-
-    /* Vídeo YouTube responsivo */
-    .video-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 400px;
-      padding-bottom: 56.25%; /* 16:9 ratio */
-      height: 0;
-      border-radius: 15px;
-      overflow: hidden;
-      box-shadow: 0 0 20px 5px #ff4081;
-      border: 3px solid #ff4081;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .video-wrapper:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 30px 8px #ff79b0;
-      border-color: #ff79b0;
-    }
-
-    .video-wrapper iframe {
-      position: absolute;
+    body::before {
+      content: "";
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      border: 0;
+      background: url('https://iili.io/3D7x3Ku.png') repeat;
+      opacity: 0.1;
+      pointer-events: none;
+      z-index: 0;
     }
 
-    /* Mobile */
-    @media (max-width: 760px) {
-      body {
-        height: auto;
-        padding: 20px 10px;
-      }
-      .container {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-      }
-      .paper, .video-wrapper {
-        max-width: 90vw;
-      }
+    .balloon {
+      position: fixed;
+      bottom: -100px;
+      animation: float 6s infinite ease-in;
+      z-index: 9999;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0) rotate(0deg); opacity: 1;}
+      100% {transform: translateY(-110vh) rotate(360deg); opacity: 0;}
+    }
+
+    #playButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 10000;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <div>
-      <div class="paper">
-        achei que vc era garota que iria escutar link do zap cmg
-      daqui 20 anos eu te aviso!
-      </div>
-      
-      <div class="audio-wrapper">
-        <iframe width="300" height="60" src="https://vocaroo.com/embed/1bmauXGLOrMB?autoplay=0" frameborder="0" allow="autoplay"></iframe><br />
-        <a href="https://voca.ro/1bmauXGLOrMB" title="Gravador de Voz do Vocaroo" target="_blank">Ver no Vocaroo &gt;&gt;</a>
-      </div>
-    </div>
+<!-- Papéis fofos com mensagens -->
+<div class="paper heart"></div>
 
-    <div class="video-wrapper" title="Vídeo YouTube">
-      <iframe src="https://www.youtube.com/embed/RUDJlL9-0Ys?si=VBDSoJY4ZVEsL6iH" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-  </div>
+<div class="paper image">
+  <p>Oi, meu amor 💖</p>
+  <p>Topa sair comigo semana que vem?</p>
+  <img src="https://iili.io/3prVRI9.jpg" alt="Convite fofo 1" />
+</div>
+
+<div class="paper image">
+  <p>Pensei na gente curtindo o Fuzuê 🍻</p>
+  <p> ✨</p>
+  <img src="https://iili.io/3prVTeS.jpg" alt="Convite fofo 2" />
+</div>
+
+<div class="paper image">
+  <p>Ou, se preferir, vamos pro Tropicano?</p>
+  <p> 💃</p>
+  <img src="https://iili.io/3prV5Xe.jpg" alt="Convite fofo 3" />
+</div>
+
+<div class="paper image">
+  <p>O que importa é estar com você 💕</p>
+  <p></p>
+ 
+</div>
+
+<div class="paper red">
+  <p class="p1">Só me diz:</p>
+  <p class="p2">Fuzuê ou Tropicano, amor? 😍</p>
+</div>
+
+<div class="paper red">
+  <p class="p1">Se arruma toda pra mim 🥰</p>
+  <p class="p2">Porque eu so quero vc ❤️</p>
+</div>
+
+<div class="paper image">
+  <p>Vai ser lindo do seu lado</p>
+  <p>Como tudo é com você 💫</p>
+  <img src="https://iili.io/3prVum7.jpg" alt="Convite fofo 5" />
+</div>
+
+<div class="paper">
+  <p class="p1">Me responde, vai?</p>
+  <p class="p1">pois ainda vai ser minha garota✨</p>
+ 
+    <img src="https://iili.io/FANpojj.md.jpg" alt="FANpojj.md.jpg"  />
+  </a>
+</div>
+
+
+
+<div class="paper">
+  <p class="p1">Arrasta os papéis com carinho</p>
+  <p class="p1">e confirma o rolê com seu boy 💌</p>
+</div>
+
+<!-- Botão para tocar música -->
+<button id="playButton">▶ Tocar Música</button>
+
+<!-- Efeitos de balões -->
+<script>
+  const colors = ['red', 'blue', 'yellow', 'green', 'purple', 'pink'];
+  function createBalloon() {
+    const balloon = document.createElement('div');
+    balloon.classList.add('balloon');
+    balloon.style.left = Math.random() * 100 + 'vw';
+    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    balloon.style.width = '20px';
+    balloon.style.height = '30px';
+    balloon.style.borderRadius = '50%';
+    balloon.style.opacity = '0.7';
+    document.body.appendChild(balloon);
+    setTimeout(() => balloon.remove(), 6000);
+  }
+  setInterval(createBalloon, 500);
+</script>
+
+<!-- Música de fundo -->
+<audio id="bgm" loop>
+  <source src="https://files.catbox.moe/1c6udk.mp3" type="audio/mp3">
+  Seu navegador não suporta áudio.
+</audio>
+<script>
+  document.getElementById("playButton").addEventListener("click", function() {
+    document.getElementById("bgm").play();
+    this.style.display = "none";
+  });
+</script>
+
+<!-- Botão de Confirmar Presença -->
+<div style="text-align: center; margin-top: 30px; z-index: 9999; position: relative;">
+  <button id="confirmButton" style="
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  ">✅ Confirmar Presença</button>
+  <p id="confirmationMessage" style="display: none; font-size: 16px; color: #333; margin-top: 10px;">
+    Presença confirmada, amor! 💕 Mal posso esperar! 😍
+  </p>
+</div>
+
+<script>
+  document.getElementById("confirmButton").addEventListener("click", function() {
+    document.getElementById("confirmationMessage").style.display = "block";
+    this.disabled = true;
+    this.textContent = "Presença Confirmada";
+    this.style.backgroundColor = "#aaa";
+  });
+</script>
+
+<!-- JavaScript externo (se necessário) -->
+<script src="script.js"></script>
 
 </body>
 </html>
