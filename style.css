@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
 body {
@@ -56,12 +57,12 @@ body {
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  max-height: 200px;
+  width: 100%;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   user-select: none;
-  pointer-events: none; /* desabilita clique */
+  pointer-events: none;
 }
 
 .paper.heart::after {
@@ -96,16 +97,9 @@ p {
   line-height: 1.2;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 600px) {
-  body {
-    padding: 10px;
-    overflow: auto; /* para evitar cortes no conteúdo */
-  }
   .paper {
     padding: 15px 30px;
-    max-width: 90vw;
-    box-sizing: border-box;
   }
   p {
     font-size: 32px;
