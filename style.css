@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
 
 body {
@@ -57,13 +56,12 @@ body {
 }
 
 img {
-  max-height: 200px; /* controla o máximo da altura */
-  width: auto;       /* largura automática para manter proporção */
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   user-select: none;
-  pointer-events: none;
-
+  pointer-events: none ; /* desabilita clique */
 }
 
 .paper.heart::after {
@@ -98,6 +96,7 @@ p {
   line-height: 1.2;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 600px) {
   .paper {
     padding: 15px 30px;
