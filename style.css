@@ -61,7 +61,7 @@ img {
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   user-select: none;
-  pointer-events: none ; /* desabilita clique */
+  pointer-events: none; /* desabilita clique */
 }
 
 .paper.heart::after {
@@ -98,8 +98,14 @@ p {
 
 /* Responsividade para telas menores */
 @media (max-width: 600px) {
+  body {
+    padding: 10px;
+    overflow: auto; /* para evitar cortes no conteúdo */
+  }
   .paper {
     padding: 15px 30px;
+    max-width: 90vw;
+    box-sizing: border-box;
   }
   p {
     font-size: 32px;
