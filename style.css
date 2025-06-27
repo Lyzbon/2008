@@ -58,7 +58,7 @@ body {
 
 img {
   max-height: 100px;
-  width: auto%;
+  width: auto;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   user-select: none;
